@@ -28,6 +28,7 @@ def multiprocess():
         while q.get() != 100:
             print(q.get())
         p.terminate()
+        print("test")
 
 
 def initiate():
