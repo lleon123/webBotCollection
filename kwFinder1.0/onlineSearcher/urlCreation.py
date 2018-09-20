@@ -24,5 +24,5 @@ def setcountry(country):
     UrlCreation.url = UrlCreation.url + "&country=" + country
 
 
-UrlCreation("com", "overview", "tisch", "de")
-print(UrlCreation.url)
+#UrlCreation("com", "overview", "tisch", "de")
+#print(UrlCreation.url)
