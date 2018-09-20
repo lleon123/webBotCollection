@@ -29,6 +29,7 @@ def multiprocess():
             print(q.get())
         p.terminate()
         print("test")
+        print("test1")
 
 
 def initiate():
