@@ -33,8 +33,11 @@ def download():
     timer = 0
     while timer < 20:
         try:
-            elLanguage = CsvDownload.driver.find_element_by_xpath("/html/body/div/div/div[2]/div[2]/div/div[1]/div[2]/div[4]/button[1]")
+            elLanguage = CsvDownload.driver.find_element_by_xpath(
+                "/html/body/div/div/div[2]/div[2]/div/div[1]/div[2]/div[4]/button[1]")
             elLanguage.send_keys(Keys.ENTER)
+            text = elLanguage.text
+            print(text)
             time.sleep(1)
             timer = 1000
         except WebDriverException:
@@ -51,7 +54,6 @@ def errorchecker(urltofrefoxprofile, urltocsvfolder, keyword):
     except WebDriverException:
         CsvDownload.driver.quit()
         CsvDownload.error = 1
-
 
 
 CsvDownload("/run/media/leonl/Data/KW_Crawler/Profiles/US/", "/run/media/leonl/Data/KW_Crawler/CSV_Files/", "elegoo")
